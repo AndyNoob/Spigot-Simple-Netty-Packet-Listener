@@ -22,8 +22,8 @@ public class PacketListener extends ChannelDuplexHandler {
     }
 
     @Override
-    public void read(ChannelHandlerContext ctx) throws Exception {
-        super.read(ctx);
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        super.channelRead(ctx, msg);
     }
 
     private void inject() {
