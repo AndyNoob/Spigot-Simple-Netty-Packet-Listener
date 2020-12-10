@@ -18,12 +18,14 @@ public class PacketListener extends ChannelDuplexHandler {
 
     @Override
     public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
-        super.write(ctx, msg, promise);
+        /* Add stuff here */
+        super.write(ctx, msg, promise); // Do not remove this
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        super.channelRead(ctx, msg);
+        /* Add stuff here */
+        super.channelRead(ctx, msg); // Do not remove this
     }
 
     private void inject() {
@@ -35,6 +37,7 @@ public class PacketListener extends ChannelDuplexHandler {
         }
     }
 
+    // Eject the player once the purpose of this is finished 
     public void eject() {
         try {
             Channel channel = Util.getPlayerChannel(player);
